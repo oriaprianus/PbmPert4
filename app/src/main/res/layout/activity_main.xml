@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#01A8A3">
+
+<!--    scrollView untuk UI activity-->
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<!--    linearLayout untuk gambar,nama dan profesi dengan orientasi vertical-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+<!--    menerapkan constraintLayouth pada nama,gambar dan profesi-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+<!--    imageView untuk tampilan gambar -->
+            <ImageView
+                android:id="@+id/ivProfile"
+                android:layout_width="match_parent"
+                android:layout_height="256dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="140dp"
+                android:layout_marginEnd="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/profile" />
+<!--            textVieew untuk nama-->
+            <TextView
+                android:id="@+id/tvNama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/ori_aprianus_manu"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/ivProfile"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="@+id/ivProfile"
+                app:layout_constraintTop_toBottomOf="@+id/ivProfile"
+                app:layout_constraintVertical_bias="0.0" />
+<!--    textview untuk profesi-->
+            <TextView
+                android:id="@+id/tvPekerjaan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/programing"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/tvNama"
+                app:layout_constraintStart_toStartOf="@+id/tvNama"
+                app:layout_constraintTop_toBottomOf="@+id/tvNama" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+<!--        linearlayouth untuk kontak-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:gravity="center_vertical">
+
+<!--        imageview untuk gambar whatsApp-->
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_whatsapp">
+            </ImageView>
+
+<!--            textview untuk menampilkan nomor whatsApp-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/whatsApp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:layout_marginLeft="8dp">
+            </TextView>
+
+        </LinearLayout>
+
+<!--        view untuk membuat garis dibawah kontakt-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="#050505"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="47dp"
+            android:layout_marginRight="40dp">
+        </View>
+
+<!--        lenearLayouth untuk tampilan email-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:gravity="center_vertical">
+
+<!--            image view untuk menampilkan gambar email -->
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_email">
+            </ImageView>
+
+<!--            textview untuk menampilkan text email -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email"
+                android:textStyle="bold"
+                android:textColor="#171717"
+                android:textSize="20dp"
+                android:layout_marginLeft="8dp">
+            </TextView>
+
+        </LinearLayout>
+
+<!--        view untuk menampilkan garis di bawah email-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="#171717"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="47dp"
+            android:layout_marginRight="40dp">
+        </View>
+
+    </LinearLayout>
+
+</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
